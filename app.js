@@ -1,3 +1,32 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+import {getFirestore,collection
+    ,getDocs,doc,setDoc } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js"
+  
+  
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyBI0kAXAZRig7GEjZuvuDEVJT97Mmq7ZIA",
+    authDomain: "my-1st-projects-6730c.firebaseapp.com",
+    projectId: "my-1st-projects-6730c",
+    storageBucket: "my-1st-projects-6730c.appspot.com",
+    messagingSenderId: "202066845750",
+    appId: "1:202066845750:web:aa65933b26f7e7b71db897",
+    measurementId: "G-Y0M7ZYMNYP"
+  };
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+
+
+
+
+
+
+
+
+
+
+
 var div1 = document.getElementById("lop")
 var div2 = document.getElementById("log")
 var div3 = document.getElementById("blow")
@@ -43,23 +72,7 @@ function pol(){
     div2.style.display="none"
     div4.style.display="block"
 }
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-import {getFirestore,collection
-    ,getDocs,doc,setDoc } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js"
-  
-  
-  
-  const firebaseConfig = {
-    apiKey: "AIzaSyBI0kAXAZRig7GEjZuvuDEVJT97Mmq7ZIA",
-    authDomain: "my-1st-projects-6730c.firebaseapp.com",
-    projectId: "my-1st-projects-6730c",
-    storageBucket: "my-1st-projects-6730c.appspot.com",
-    messagingSenderId: "202066845750",
-    appId: "1:202066845750:web:aa65933b26f7e7b71db897",
-    measurementId: "G-Y0M7ZYMNYP"
-  };
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+
 
 async function jol(){
  const querySnapshot = await getDocs(collection(db, "cities"));
